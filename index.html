@@ -3793,10 +3793,10 @@ viewportEl.addEventListener("pointermove",e=>{
   const dt=Math.max(6,now-dragLastT);
 
   const directSensitivity = state.level==="universe" ? 0.0125 : 0.0115;
-  const deltaAngle=dx*directSensitivity;
+  const deltaAngle=-dx*directSensitivity;
   orbitNodes.forEach(n=>n.a += deltaAngle);
 
-  const rawVelocity=(dx/dt)*0.19;
+  const rawVelocity=-(dx/dt)*0.19;
   orbitVelocity=Math.max(-0.075,Math.min(0.075,rawVelocity));
 
   dragTravel+=Math.abs(dx);
