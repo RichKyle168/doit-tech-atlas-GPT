@@ -24,16 +24,22 @@ GPT 版本的 DOIT Tech Atlas 展示站。
 ## 專案結構
 
 ```
-index.html
-styles.css
-app.js
-data.js
-galaxy-reference.jpg
-vercel.json
+index.html      # 自包含展示版：CSS、JS、資料與銀河背景皆已內嵌
+vercel.json     # Vercel 靜態部署設定
+.gitignore
+README.md
 ```
 
-這是純靜態展示站，可直接部署至 Vercel、Cloudflare Pages、Netlify 或任意靜態網站服務。
+這是純靜態展示站，不需要 npm build，也不需要資料庫。
 
-## Staging
+## 部署
 
-下一步：連接 Vercel，將本 Repo 的 `main` branch 自動部署為 Staging。
+Vercel 設定可直接使用：
+
+- Framework Preset: Other
+- Build Command: 留空
+- Output Directory: 留空
+- Root Directory: `./`
+
+部署來源使用本 Repo 的 `main` branch。
+
